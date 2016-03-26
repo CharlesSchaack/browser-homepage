@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<main>
+    <h1>Home</h1>
+    <hr>
+    <ul>
+        <li class="social">social</li>
+        <li><a href="https://reddit.com">reddit</a></li>
+        <li><a href="https://www.youtube.com/feed/subscriptions">youtube</a></li>
+        <li><a href="https://twitter.com/">twitter</a></li>
+        <li><a href="https://www.inoreader.com/">inoreader</a></li>
+        <li><a href="https://mail.google.com">gmail</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <li class="subh">code</a></li>
+        <li><a href="https://trello.com">trello</a></li>
+        <li><a href="https://github.com">github</a></li>
+        <li><a href="https://stackoverflow.com">stackoverflow</a></li>
+        <li><a href="http://mediapc:8282/mediawiki/index.php/Main_Page">mediawiki</a></li>
+    </ul>
+    <hr>
+    <p>
+        <input type="text" class="searchfield" placeholder="Query the Duck"  />
+    </p>
+</main>
+<script>
+    document.getElementsByClassName('searchfield')[0].onkeypress = function (e) {
+        if (!e) e = window.event;
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == '13') {
+            window.location.href = "https://duckduckgo.com/?q=" + document.getElementsByClassName('searchfield')[0].value;
+        }
+    };
+</script>
+</body>
+</html>
